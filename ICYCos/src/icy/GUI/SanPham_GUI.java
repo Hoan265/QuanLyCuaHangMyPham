@@ -14,9 +14,11 @@ import static icy.GUI.BanHang_GUI.BH;
 import static icy.GUI.DangNhap_GUI.DN;
 import static icy.GUI.DoanhThu_GUI.DT;
 import static icy.GUI.HoSoNV_GUI.HS;
+import static icy.GUI.HoTro_GUI.HT;
 import static icy.GUI.HuongDan_GUI.HD;
 import static icy.GUI.KhachHang_GUI.KH;
 import static icy.GUI.KhuyenMai_GUI.KM;
+import static icy.GUI.NhapHang_GUI.NH;
 import static icy.GUI.QLNV_GUI.NV;
 import static icy.GUI.ThongKe_GUI.TK;
 import java.awt.Color;
@@ -51,8 +53,6 @@ public class SanPham_GUI extends javax.swing.JFrame {
     LoaiSP_BUS busLoai=new LoaiSP_BUS();
     LoaiSP_DTO lsp=new LoaiSP_DTO();
     String linkAnh="C:\\IDE java\\NetBeans-13\\JaVa\\ICYCos\\src\\icy\\HinhAnh_ICY\\SanPham\\SPMacDinh";
-    static NhapHang_GUI nh=new NhapHang_GUI();
-    static HoTro_GUI ht=new HoTro_GUI();
     public SanPham_GUI() {
         initComponents();
        
@@ -2008,8 +2008,8 @@ public class SanPham_GUI extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập") && checkQuyenQLGD() == true) {
             if (btnNhapHang.isSelected() == true) {
                 SP.setVisible(false);
-                nh.NH.setVisible(true);
-                nh.NH.setLocationRelativeTo(null);
+                NH.setVisible(true);
+                NH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -2020,8 +2020,8 @@ public class SanPham_GUI extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnHoTro.isSelected() == true) {
                 SP.setVisible(false);
-                ht.HT.setVisible(true);
-                ht.HT.setLocationRelativeTo(null);
+                HT.setVisible(true);
+                HT.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");

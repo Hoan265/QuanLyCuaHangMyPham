@@ -1711,9 +1711,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập") && checkQuyenQLGD() == true) {
             if (btnNhapHang.isSelected() == true) {
                 KH.setVisible(false);
-                NhapHang_GUI nh = new NhapHang_GUI();
-                nh.NH.setVisible(true);
-                nh.NH.setLocationRelativeTo(null);
+                NH.setVisible(true);
+                NH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -1774,9 +1773,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnDonHang.isSelected() == true) {
                 KH.setVisible(false);
-                BanHang_GUI bh = new BanHang_GUI();
-                bh.setVisible(true);
-                bh.setLocationRelativeTo(null);
+                BH.setVisible(true);
+                BH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");

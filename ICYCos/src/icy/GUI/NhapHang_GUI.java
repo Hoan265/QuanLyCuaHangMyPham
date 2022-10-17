@@ -21,11 +21,13 @@ import static icy.GUI.BanHang_GUI.BH;
 import static icy.GUI.DangNhap_GUI.DN;
 import static icy.GUI.DoanhThu_GUI.DT;
 import static icy.GUI.HoSoNV_GUI.HS;
+import static icy.GUI.HoTro_GUI.HT;
 import static icy.GUI.HuongDan_GUI.HD;
 import static icy.GUI.KhachHang_GUI.KH;
 import static icy.GUI.KhuyenMai_GUI.KM;
 import static icy.GUI.QLNV_GUI.NV;
 import icy.GUI.SanPham_GUI;
+import static icy.GUI.SanPham_GUI.SP;
 import static icy.GUI.ThongKe_GUI.TK;
 import static icy.TrangChu_ICY.TC;
 import java.awt.Color;
@@ -54,8 +56,6 @@ public class NhapHang_GUI extends javax.swing.JFrame {
     static NhaCungCap_GUI ncc_gui=new NhaCungCap_GUI();
     int d=0;//Biến dùng để khi nhập hàng sẽ tự động tăng lên (Mã PN) trong đó các spham nhập sẽ có cùng MãPN
     static int x=PhieuNhap_BUS.dspnh.size()+1;//Biến dùng gán Mã PN trong ds sản phẩm khi nhập
-    static SanPham_GUI sp=new SanPham_GUI();
-    static HoTro_GUI ht=new HoTro_GUI();
     public NhapHang_GUI() {
         initComponents();
         DocKho();
@@ -313,6 +313,11 @@ public class NhapHang_GUI extends javax.swing.JFrame {
         btnNhapHang.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnNhapHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icy/HinhAnh_ICY/TrangChu/NhapHang.png"))); // NOI18N
         btnNhapHang.setText(" Nhập hàng");
+        btnNhapHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNhapHangActionPerformed(evt);
+            }
+        });
 
         btnThongKe.setBackground(new java.awt.Color(255, 204, 204));
         buttonGroup1.add(btnThongKe);
@@ -1027,9 +1032,8 @@ public boolean checkQuyenQLGD() {
     if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnSanPham.isSelected() == true) {
                 NH.setVisible(false);
-                SanPham_GUI sp = new SanPham_GUI();
-                sp.setVisible(true);
-                sp.setLocationRelativeTo(null);
+                SP.setVisible(true);
+                SP.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -1434,8 +1438,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnHoTro.isSelected() == true) {
                 NH.setVisible(false);
-                ht.HT.setVisible(true);
-                ht.HT.setLocationRelativeTo(null);
+                HT.setVisible(true);
+                HT.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -1529,9 +1533,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnDonHang.isSelected() == true) {
                 NH.setVisible(false);
-                BanHang_GUI bh = new BanHang_GUI();
-                bh.setVisible(true);
-                bh.setLocationRelativeTo(null);
+                BH.setVisible(true);
+                BH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -1549,6 +1552,10 @@ public boolean checkQuyenQLGD() {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
         }
     }//GEN-LAST:event_btnNhanVienActionPerformed
+
+    private void btnNhapHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhapHangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNhapHangActionPerformed
     
     /*======================================ProFile Đăng Nhập==================================*/
     public void setTextTenDN(String s){

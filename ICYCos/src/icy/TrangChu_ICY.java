@@ -12,12 +12,15 @@ import static icy.GUI.DangNhap_GUI.DN;
 import static icy.GUI.DoanhThu_GUI.DT;
 import static icy.GUI.HoSoNV_GUI.HS;
 import icy.GUI.HoTro_GUI;
+import static icy.GUI.HoTro_GUI.HT;
 import static icy.GUI.HuongDan_GUI.HD;
 import static icy.GUI.KhachHang_GUI.KH;
 import static icy.GUI.KhuyenMai_GUI.KM;
 import icy.GUI.NhapHang_GUI;
+import static icy.GUI.NhapHang_GUI.NH;
 import static icy.GUI.QLNV_GUI.NV;
 import icy.GUI.SanPham_GUI;
+import static icy.GUI.SanPham_GUI.SP;
 import static icy.GUI.ThongKe_GUI.TK;
 import javax.swing.JOptionPane;
 
@@ -28,9 +31,6 @@ import javax.swing.JOptionPane;
 public class TrangChu_ICY extends javax.swing.JFrame {
 
     public static TrangChu_ICY TC = new TrangChu_ICY();
-    static SanPham_GUI sp = new SanPham_GUI();
-    //static NhapHang_GUI nh = new NhapHang_GUI();
-    static HoTro_GUI ht = new HoTro_GUI();
     QLNV_BUS busnv = new QLNV_BUS();
 
     public TrangChu_ICY() {
@@ -398,9 +398,8 @@ public class TrangChu_ICY extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnSanPham.isSelected() == true) {
                 TC.setVisible(false);
-                SanPham_GUI sp = new SanPham_GUI();
-                sp.setVisible(true);
-                sp.setLocationRelativeTo(null);
+                SP.setVisible(true);
+                SP.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -411,9 +410,8 @@ public class TrangChu_ICY extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập") && checkQuyenQLGD() == true) {
             if (btnNhapHang.isSelected() == true) {
                 TC.setVisible(false);
-                NhapHang_GUI nh = new NhapHang_GUI();
-                nh.NH.setVisible(true);
-                nh.NH.setLocationRelativeTo(null);
+                NH.setVisible(true);
+                NH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -424,8 +422,8 @@ public class TrangChu_ICY extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnHoTro.isSelected() == true) {
                 TC.setVisible(false);
-                ht.HT.setVisible(true);
-                ht.HT.setLocationRelativeTo(null);
+                HT.setVisible(true);
+                HT.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -510,9 +508,8 @@ public class TrangChu_ICY extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnDonHang.isSelected() == true) {
                 TC.setVisible(false);
-                BanHang_GUI bh = new BanHang_GUI();
-                bh.setVisible(true);
-                bh.setLocationRelativeTo(null);
+                BH.setVisible(true);
+                BH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");

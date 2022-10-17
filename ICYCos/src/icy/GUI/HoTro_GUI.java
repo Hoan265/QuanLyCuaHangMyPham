@@ -14,8 +14,10 @@ import static icy.GUI.HoSoNV_GUI.HS;
 import static icy.GUI.HuongDan_GUI.HD;
 import static icy.GUI.KhachHang_GUI.KH;
 import static icy.GUI.KhuyenMai_GUI.KM;
+import static icy.GUI.NhapHang_GUI.NH;
 import static icy.GUI.QLNV_GUI.NV;
 import icy.GUI.SanPham_GUI;
+import static icy.GUI.SanPham_GUI.SP;
 import static icy.GUI.ThongKe_GUI.TK;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -27,8 +29,6 @@ import javax.swing.JOptionPane;
  */
 public class HoTro_GUI extends javax.swing.JFrame {
     public static HoTro_GUI HT=new HoTro_GUI();
-    static SanPham_GUI sp=new SanPham_GUI();
-    static NhapHang_GUI nh=new NhapHang_GUI();
     public HoTro_GUI() {
         initComponents();
         try{
@@ -535,8 +535,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnSanPham.isSelected() == true) {
                 HT.setVisible(false);
-                sp.SP.setVisible(true);
-                sp.SP.setLocationRelativeTo(null);
+                SP.setVisible(true);
+                SP.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -547,9 +547,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập") && checkQuyenQLGD() == true) {
             if (btnNhapHang.isSelected() == true) {
                 HT.setVisible(false);
-                NhapHang_GUI nh = new NhapHang_GUI();
-                nh.setVisible(true);
-                nh.setLocationRelativeTo(null);
+                NH.setVisible(true);
+                NH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -587,9 +586,8 @@ public boolean checkQuyenQLGD() {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnDonHang.isSelected() == true) {
                 HT.setVisible(false);
-                BanHang_GUI bh = new BanHang_GUI();
-                bh.setVisible(true);
-                bh.setLocationRelativeTo(null);
+                BH.setVisible(true);
+                BH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");

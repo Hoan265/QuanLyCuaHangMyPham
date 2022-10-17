@@ -25,7 +25,9 @@ import static icy.GUI.HoTro_GUI.HT;
 import static icy.GUI.HuongDan_GUI.HD;
 import static icy.GUI.KhachHang_GUI.KH;
 import static icy.GUI.KhuyenMai_GUI.KM;
+import static icy.GUI.NhapHang_GUI.NH;
 import static icy.GUI.QLNV_GUI.NV;
+import static icy.GUI.SanPham_GUI.SP;
 import static icy.GUI.ThongKe_GUI.TK;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -41,9 +43,6 @@ import javax.swing.table.TableModel;
  * @author HP
  */
 public class BanHang_GUI extends javax.swing.JFrame {
-
-    static SanPham_GUI sp = new SanPham_GUI();
-    static NhapHang_GUI nh = new NhapHang_GUI();
     DefaultTableModel model = new DefaultTableModel();
     DefaultTableModel modelGH = new DefaultTableModel();
     DefaultTableModel modelHD = new DefaultTableModel();
@@ -1043,9 +1042,8 @@ public class BanHang_GUI extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập")) {
             if (btnSanPham.isSelected() == true) {
                 BH.setVisible(false);
-                SanPham_GUI sp = new SanPham_GUI();
-                sp.setVisible(true);
-                sp.setLocationRelativeTo(null);
+                SP.setVisible(true);
+                SP.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
@@ -1322,9 +1320,8 @@ public class BanHang_GUI extends javax.swing.JFrame {
         if (!btnDangNhap.getText().equals(" Đăng nhập") && checkQuyenQLGD() == true) {
             if (btnNhapHang.isSelected() == true) {
                 BH.setVisible(false);
-                NhapHang_GUI nh = new NhapHang_GUI();
-                nh.NH.setVisible(true);
-                nh.NH.setLocationRelativeTo(null);
+                NH.setVisible(true);
+                NH.setLocationRelativeTo(null);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Bạn không được sử dụng chức năng này!");
