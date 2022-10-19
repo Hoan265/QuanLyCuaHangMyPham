@@ -49,7 +49,7 @@ import org.apache.poi.xwpf.usermodel.Document;
  */
 public class QLNV_GUI extends javax.swing.JFrame {
     public static QLNV_GUI NV = new QLNV_GUI();
-    public static QuanLyTK TK = new QuanLyTK();
+   // public static QuanLyTK TK = new QuanLyTK();
     static HoSoNV_GUI HS = new HoSoNV_GUI();
     static ArrayList<QLNV_DTO> dsnv = new ArrayList<>();
     static ArrayList<Luong_DTO> dsluong = new ArrayList<>();
@@ -2182,14 +2182,14 @@ public class QLNV_GUI extends javax.swing.JFrame {
         }
         for (QLNV_DTO nv : bus.dsnv) {
             if (btnDangNhap.getText().equals(nv.Ten)) {
-                HS.setTextEmail(nv.Email);
+                /*HS.setTextEmail(nv.Email);
                 HS.setTextDiaChi(nv.DiaChi);
                 HS.setTextTen(nv.Ho+" "+nv.Ten);
                 HS.setTextGT(nv.GioiTinh);
                 HS.setTextMaNV(nv.Ma);
                 HS.setTextChucVu(nv.ChucVu);
                 HS.setTextAnh(nv.anh);
-                HS.setTextNgaySinh(nv.NgaySinh+"/"+nv.ThangSinh+"/"+nv.NamSinh);
+                HS.setTextNgaySinh(nv.NgaySinh+"/"+nv.ThangSinh+"/"+nv.NamSinh);*/
             }
         }
     }//GEN-LAST:event_btnDangNhapActionPerformed
@@ -3320,7 +3320,7 @@ public boolean checkQuyenQLGD() {
         //DK.setTextY(cbbChucVu.getSelectedItem().toString());
         //DK.setVisible(true);
         //DK.setLocationRelativeTo(null);
-          TK.setVisible(true);
+          //TK.setVisible(true);
         
     }//GEN-LAST:event_btnTKActionPerformed
 
